@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}
+    My awesome app!
+{% endblock %}
+
+{% block content %}
+<span class='bgc'>
+{% for news in news_list %}
+<h1>
+    <a href="id/{{ news.id }}">{{ news.article }}</a>
+</h1>
+{% endfor %}
+<a href="news/create">Create</a>
+</span>
+
+<h1>Create News</h1>
+{% endblock %}
